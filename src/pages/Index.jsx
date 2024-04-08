@@ -204,6 +204,7 @@ const Index = () => {
                   {event.attributes.name}
                 </Heading>
                 <Text>{event.attributes.description}</Text>
+                <Text>{event.attributes.description}</Text>
                 <HStack justifyContent="flex-end" marginTop="4">
                   <IconButton
                     icon={<FaEdit />}
