@@ -9,12 +9,16 @@ const Index = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [editingEventId, setEditingEventId] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast();
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
     fetchEvents();
   }, []);
 
