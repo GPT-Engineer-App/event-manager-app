@@ -41,8 +41,8 @@ const Index = () => {
         },
         body: JSON.stringify({
           data: {
-            name,
-            description,
+            Name: name,
+            Description: description,
           },
         }),
       });
@@ -70,8 +70,8 @@ const Index = () => {
         },
         body: JSON.stringify({
           data: {
-            name,
-            description,
+            Name: name,
+            Description: description,
           },
         }),
       });
