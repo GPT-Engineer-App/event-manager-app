@@ -201,17 +201,16 @@ const Index = () => {
             {events.map((event) => (
               <Box key={event.id} borderWidth="1px" borderRadius="md" padding="4">
                 <Heading as="h3" size="md">
-                  {event.attributes.name}
+                  {event.attributes.Name}
                 </Heading>
-                <Text>{event.attributes.description}</Text>
-                <Text>{event.attributes.description}</Text>
+                <Text>{event.attributes.Description}</Text>
                 <HStack justifyContent="flex-end" marginTop="4">
                   <IconButton
                     icon={<FaEdit />}
                     onClick={() => {
                       setEditingEventId(event.id);
-                      setName(event.attributes.name);
-                      setDescription(event.attributes.description);
+                      setName(event.attributes.Name);
+                      setDescription(event.attributes.Description);
                     }}
                     aria-label="Edit Event"
                   />
